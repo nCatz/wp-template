@@ -1,0 +1,87 @@
+/**
+Theme name: nCatz
+Theme URI: https://www.ncatz.com
+Description: Theme used in nCatz.com
+Author: Yeray Ruiz Juárez
+Author URI: https://www.yeray.ncatz.com
+Version: 1.0
+*/
+#grid-blog{
+  column-count: 1;
+}
+.grid-blog-item {
+    width: 100%;
+    margin: 0;
+    -webkit-column-break-inside: avoid; /* Chrome, Safari */
+    page-break-inside: avoid;           /* Theoretically FF 20+ */
+    break-inside: avoid-column;         /* IE 11 */
+    display:table;                      /* Actually FF 20+ */
+}
+
+@media only screen and (min-width: 600px) {
+    #grid-blog{
+      column-count: 2;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    #grid-blog{
+      column-count: 4;
+    }
+}
+.grid-blog-image-item {
+  max-height: 300px;
+}
+
+.blog-thumbnail-responsive{
+  width: 100%;
+  height: auto;
+}
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
+
+div{
+    word-wrap: break-word;
+}
+
+.light-bold{
+    font-weight: 500;
+}
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+.blog_entry{
+  padding: 5px 25px;
+}
+.sidebar{
+  padding: 10px;
+}
