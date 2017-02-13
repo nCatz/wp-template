@@ -26,7 +26,8 @@
                   <?php the_excerpt(); ?>
                 </div>
                 <div class="card-action grid-card-action-blog-item">
-                  Por <?php the_author_posts_link() ?> <time datatime="<?php the_time('Y-m-j'); ?>"><?php the_time('j F, Y'); ?></time>
+                  <span class="left">Por <?php the_author_posts_link() ?></span>
+                  <span class="right"><time datatime="<?php the_time('Y-m-j'); ?>"><?php the_time('j F, Y'); ?></time></span>
                 </div>
             </div>
         </div>
@@ -43,5 +44,4 @@
 <?php else : ?>
   <p><?php _e('Ups!, no hay entradas.'); ?></p>
 <?php endif; ?>
-<!-- Archivo de pié global de Wordpress -->
 <?php get_footer(); ?>
