@@ -7,7 +7,7 @@
     <div class="row grid-blog">
       <?php while ( have_posts() ) : the_post(); ?>
         
-        <div class="col s12 m12 l6 grid-blog-item">
+        <div class="col s12 m6 l4 grid-blog-item">
             <div class="card hoverable grid-card-blog-item">
                 <?php if ( has_post_thumbnail() ) : ?>
                   <div class="card-image">
