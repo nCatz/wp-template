@@ -6,34 +6,23 @@ Author: Yeray Ruiz Juárez
 Author URI: https://www.yeray.ncatz.com
 Version: 1.0
 */
-#grid-blog{
-  column-count: 1;
+.card .card-action.grid-card-action-blog-item a {
+  text-transform: none !important;
 }
-.grid-blog-item {
-    width: 100%;
-    margin: 0;
-    -webkit-column-break-inside: avoid; /* Chrome, Safari */
-    page-break-inside: avoid;           /* Theoretically FF 20+ */
-    break-inside: avoid-column;         /* IE 11 */
-    display:table;                      /* Actually FF 20+ */
+.grid-card-action-blog-item{
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
 }
-
-@media only screen and (min-width: 600px) {
-    #grid-blog{
-      column-count: 2;
-    }
+.grid-card-blog-item{
+  height: 90%;
 }
-@media only screen and (min-width: 1600px) {
-    #grid-blog{
-      column-count: 4;
-    }
+.grid-blog-item{
+  height: 500px;
 }
-.grid-blog-image-item {
-  max-height: 300px;
-}
-
 .blog-thumbnail-responsive{
-  width: 100%;
+  max-width: 100%;
+  max-height: 200px;
   height: auto;
 }
 
