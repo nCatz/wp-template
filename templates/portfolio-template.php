@@ -8,16 +8,14 @@ Template Name: Portfolio template
 
 
 <?php
-        $template = 'templates/project-template';
-        $query = new WP_Query( array( 'post_type' => 'page', 'meta_key' => '_wp_page_template', 'meta_value' => $template.'.php' ) );
-
-        if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-        
-        <?php the_title(); ?>
-        <?php endwhile; // end of the loop. ?>
-
-
-      <?php wp_reset_query(); ?>
-</div>
+$query = get_pages( array('hierarchical' => 0, 'meta_key' => '_wp_page_template', 'meta_value' => 'templates/project-template.php' ) );
+foreach($query as $page) {
+	echo '<div class="card">
+		<div class="card-content">
+			    '.$page->post_title.'<br />
+		</div>
+	</div>';
+}
+?>
 </div>
 <?php get_footer(); ?>

@@ -14,7 +14,16 @@ class project_widget extends WP_Widget {
         ?>
         <aside id='project_widget' class='widget project_widget'>
             <h3 class='widget-title'>Mi Primer Widget</h3>
-            <p>¡Este es mi primer Widget!</p>
+            <?php
+                $query = get_pages( array('hierarchical' => 0, 'meta_key' => '_wp_page_template', 'meta_value' => 'templates/project-template.php' ) );
+                foreach($query as $page) {
+                    echo '<div class="card">
+                        <div class="card-content">
+                                '.$page->post_title.'<br />
+                        </div>
+                    </div>';
+                }
+            ?>
         </aside>
         <?php
         echo $after_widget;
