@@ -22,7 +22,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            <span class="<?php echo get_primary_text_color()?>-text light-bold">© 2014 Copyright Text</span>
+            <span class="<?php echo get_primary_text_color()?>-text light-bold">© <?php echo date("Y"); ?> Copyright</span>
             <a class="<?php echo get_primary_text_color()?>-text right light-bold" href="<?php echo ""; ?>">Privacy</a>
             </div>
           </div>
