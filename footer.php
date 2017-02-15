@@ -1,4 +1,5 @@
 </main>
+<?php get_sidebar('footer');?>
 	<footer class="page-footer <?php echo get_primary_color(); ?>">
           <div class="container">
             <div class="row">
