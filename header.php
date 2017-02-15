@@ -7,10 +7,6 @@
 	<meta charset="<?php bloginfo('charset');?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
  
-	<!-- Cargando la Hoja de Estilos  -->
-  <link href="<?php echo get_template_directory_uri().'/css/materialize.css'; ?>" rel="stylesheet">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" >
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Pingbacks -->
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
  
