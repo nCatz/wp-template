@@ -14,6 +14,11 @@ function get_primary_color(){
 function get_primary_text_color(){
     return "white";
 }
+/* Generate css after user saves on personalization menu */
+function generateCSS(){
+    //TODO
+}
+add_action( 'customize_save_after', 'generateCSS' );
 
 /* Cambia el nombre de la clase activa del menu*/
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
