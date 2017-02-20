@@ -12,11 +12,14 @@ class project_widget extends WP_Widget {
         // Contenido del Widget que se mostrará en la Sidebar
         echo $before_widget;    
         ?>
-        <aside id='project_widget' class='widget project_widget'>
+        <aside id='project_widget' class='widget'>
             <?php if (isset($instance["title"])) : ?>
-            <h3 class='widget-title container'><?php echo $instance["title"];?></h3>
+            <div class="widget_title">
+                <h3 class="widget_title_text"><?php echo $instance["title"];?></h3>
+                <hr class="widget_separator"></hr>
+            </div>
             <?php endif; ?>
-            <div class="row <?php echo ($instance["container"])?"container":"";?>">
+            <div class="row project_widget_row <?php echo ($instance["container"])?"container":"";?>">
             <?php
                 $limit = (isset($instance["number"]) && $instance["number"] != "")?$instance["number"]:-1;
                 $limitCount = 0;
@@ -31,26 +34,33 @@ class project_widget extends WP_Widget {
                         $image = "error";
                     }
                     echo '
-                    <div class="card col s12 m6 l4 project_widget">
+                    <div class="card medium col s12 m6 l4 project_widget_item">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="'.$image.'">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">'.$page->post_title.'<i class="material-icons right">expand_less</i></span>
-                            <p><a href="'.get_permalink($id).'">Leer mas...</a></p>
+                        </div>
+                        <div class="card-action">
+                            <span class="right"><a href="'.get_permalink($id).'">Leer mas</a></span>
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">'.$page->post_title.'<i class="material-icons right">expand_more</i></span>
-                            <p>'.get_the_excerpt($id).'<br><a href="'.get_permalink($id).'">Leer mas...</a></p>
+                            <p>'.get_the_excerpt($id).'</p>
+                            <div class="card-action">
+                                <span class="right"><a href="'.get_permalink($id).'">Leer mas</a></span>
+                            </div>
                         </div>
                     </div>';
                     $limitCount = $limitCount+1;
                 }
             ?>
             </div>
+            <?php if (isset($instance["see_all"]) && $instance["see_all"] != "") : ?>
             <div class ="bt center-align">
-                <a class="waves-effect waves-light btn" href="<?php echo isset($instance["see_all"])?$instance["see_all"]:""; ?>"><?php echo ($instance["see_all_text"] != "")?$instance["see_all_text"]:"See all our projects"; ?></a>
+                <a class="waves-effect waves-light btn" href="<?php echo $instance["see_all"]; ?>"><?php echo ($instance["see_all_text"] != "")?$instance["see_all_text"]:"See all our projects"; ?></a>
             </div>
+            <?php endif; ?>
         </aside>
         <?php
         echo $after_widget;
