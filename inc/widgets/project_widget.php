@@ -13,7 +13,7 @@ class project_widget extends WP_Widget {
         echo $before_widget;    
         ?>
         <aside id='project_widget' class='widget'>
-            <?php if (isset($instance["title"])) : ?>
+            <?php if (isset($instance["title"]) && $instance["title"] != "") : ?>
             <div class="widget_title">
                 <h3 class="widget_title_text"><?php echo $instance["title"];?></h3>
                 <hr class="widget_separator"></hr>

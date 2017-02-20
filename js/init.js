@@ -1,5 +1,5 @@
-(function($){
-  $(function(){
+(function ($) {
+  $(function () {
 
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
@@ -8,5 +8,10 @@
       itemSelector: '.grid-blog-item',
       columnWidth: 200
     });
+    $('.modal').modal();
   });
 })(jQuery);
+function shareBlog() {
+  $('#modal-share').modal('open');
+  
+}
