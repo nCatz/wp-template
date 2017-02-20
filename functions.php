@@ -109,6 +109,9 @@ function add_menuclass($ulclass) {
 }
 add_filter('wp_nav_menu','add_menuclass');
 
+/* Add excerpt to pages*/
+add_post_type_support( 'page', 'excerpt' );
+
 /**
  * Customizer additions.
  */
