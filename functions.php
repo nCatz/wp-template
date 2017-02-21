@@ -1,22 +1,14 @@
 <?php
 include(TEMPLATEPATH . '/inc/scripts.php');
 include(TEMPLATEPATH . '/inc/widgets.php');
-
-/* Variables */
-function get_theme_background_color(){
-    return "grey lighten-4";
-}
-
-function get_primary_color(){
-    return "indigo";
-}
-
-function get_primary_text_color(){
-    return "white";
-}
+require_once(TEMPLATEPATH."/lib/MaterializecssCompilerInPHP/MatCompiler.php");
 /* Generate css after user saves on personalization menu */
 function generateCSS(){
-    //TODO
+    $compiler = new MatCompiler();
+    $compiler->setPrimaryColor("blue-grey","lighten-2");
+    $compiler->setSecondaryColor("deep-orange","accent-2");
+    $compiler->setNavbarFontColor("white","",true);
+    $compiler->compileScss(TEMPLATEPATH."/css/","materialize.css");
 }
 add_action( 'customize_save_after', 'generateCSS' );
 
@@ -57,14 +49,14 @@ echo '<div id="index-banner" class="parallax-container">
       <div class="container">
         <br><br>';
     echo '
-    <h1 class="header center '.get_primary_color().'-text">' . wp_kses_post($header_title) . '</h1>
+    <h1 class="header center">' . wp_kses_post($header_title) . '</h1>
         <div class="row center">
-            <h5 class="header col s12 '.get_primary_color().'-text">' . wp_kses_post($header_subtext) . '</h5>
+            <h5 class="header col s12">' . wp_kses_post($header_subtext) . '</h5>
         </div>';
         if ($header_button_url) {
             echo '
         <div class="row center">
-            <a id="download-button" class="btn-large waves-effect waves-light '.get_primary_color().' '.get_primary_text_color().'-text " href="' . esc_url($header_button_url) . '">' . esc_html($header_button) . '</a>
+            <a id="download-button" class="btn-large waves-effect waves-light" href="' . esc_url($header_button_url) . '">' . esc_html($header_button) . '</a>
         </div>';
         echo '
         <br><br>
@@ -81,11 +73,6 @@ echo '<div id="index-banner" class="parallax-container">
     
         }
 }
-
-function add_menuclass($ulclass) {
-   return preg_replace('/<a /', '<a class="'.get_primary_text_color().'-text"', $ulclass);
-}
-add_filter('wp_nav_menu','add_menuclass');
 
 /* Add excerpt to pages*/
 add_post_type_support( 'page', 'excerpt' );

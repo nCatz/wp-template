@@ -14,12 +14,12 @@
  
 </head>
  
-<body <?php body_class("Site ".get_theme_background_color()); ?>>
+<body <?php body_class("Site"); ?>>
  
 <header id="main-header">
-	<nav class="'.get_primary_color().'" role="navigation">
+	<nav role="navigation">
 		<div class="nav-wrapper container">
-			<a id="logo-container" href="#" class="brand-logo '.get_primary_text_color().'-text">nCatz</a>
+			<a id="logo-container" href="#" class="brand-logo">nCatz</a>
 			<ul class="right hide-on-med-and-down">
 				<?php 
 					wp_nav_menu(array(
