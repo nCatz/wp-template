@@ -17,6 +17,9 @@ Version: 1.0
 .widget_title{
   display:inline-block;
 }
+.project_widget_item{
+  margin: 15px;
+}
 hr.widget_separator {
   width: auto; 
   border: 0; 
