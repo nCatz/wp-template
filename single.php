@@ -18,7 +18,7 @@
             <div class="col s12 blog-entry-info">
               <div class="divider"></div>
               <i class="material-icons">account_circle</i>
-              <a href="<?php echo get_the_author_link(); ?>"><?php echo get_the_author(); ?></a>
+              <?php echo the_author_posts_link(); ?>
               <span class="tab-separator">/</span>
               <i class="material-icons">perm_contact_calendar</i><?php the_time( get_option( 'date_format' ) ); ?>
               <span class="tab-separator">/</span>
