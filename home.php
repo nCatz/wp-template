@@ -13,11 +13,11 @@
                   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                     <?php the_post_thumbnail( 'full', array( 'class'  => 'blog-thumbnail-responsive' ) ); ?>
                   </a>
-                  <a href="<?php the_permalink(); ?>"><span class="card-title <?php echo get_primary_text_color();?>-text"><?php the_title(); ?></span></a>
+                  <a href="<?php the_permalink(); ?>"><span class="card-title"><?php the_title(); ?></span></a>
                 </div> <!-- <div class="card-image"> -->
               <?php else : ?>
                 <div class="card-content">
-                  <a href="<?php the_permalink(); ?>"><span class="card-title <?php echo (get_primary_text_color() == "white")?"black":get_primary_text_color();?>-text"><?php the_title(); ?></span></a>
+                  <a href="<?php the_permalink(); ?>"><span class="card-title"><?php the_title(); ?></span></a>
                 </div> <!-- <div class="card-content"> -->
                 <div class="divider"></div>
               <?php endif; ?>
