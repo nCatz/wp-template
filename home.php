@@ -4,10 +4,10 @@
 <?php if ( have_posts() ) : ?>
   <section>
     <div class="container">
-    <div class="row grid-blog">
+    <div id="masonry-blog" class="row grid-blog">
       <?php while ( have_posts() ) : the_post(); ?>
         
-        <div class="col s12 m6 l4 grid-blog-item">
+        <div class="col s12 m6 grid-blog-item">
             <div class="card hoverable grid-card-blog-item">
                 <?php if ( has_post_thumbnail() ) : ?>
                   <div class="card-image">

@@ -3,12 +3,14 @@
 
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
-    $('.grid-blog').masonry({
-      // options...
-      itemSelector: '.grid-blog-item',
-      columnWidth: 200
+
+    var $container = $('#masonry-blog');
+    // initialize
+    $container.masonry({
+      columnWidth: '.col',
+      itemSelector: '.col',
     });
-    $('.modal').modal();
+    
   });
 })(jQuery);
 function shareBlog() {
