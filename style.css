@@ -91,7 +91,8 @@ div{
 .sidebar{
   padding: 10px;
 }
-.blog-entry-info{
+.grid-card-blog-item{
+  max-width: 500px;
 }
 .material-icons, .icon-text {
       vertical-align: middle;
