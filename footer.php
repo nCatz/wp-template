@@ -27,7 +27,7 @@
     <div class="footer-copyright">
       <div class="container">
         <span class="light-bold">© <?php echo date("Y"); ?> Copyright</span>
-        <a class="light-bold" href="<?php echo ""; ?>">Privacy</a>
+        <a class="light-bold right" href="<?php echo ""; ?>">Privacy</a>
       </div> <!-- <div class="container"> -->
     </div> <!-- <div class="footer-copyright"> -->
   </footer>
