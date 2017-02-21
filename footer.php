@@ -4,8 +4,11 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5>Footer Content</h5>
-          <p><?php bloginfo('description'); ?></p>
+          <h5>Puedes seguirme en</h5>
+          <div class="social-buttons">
+            <a href="https://github.com/yeray697/"><img src="https://yeray.ncatz.com/wp-content/uploads/2017/02/github-128.png"width="48px" height="48px"></a>
+            <a href="https://www.linkedin.com/in/yeray-ruiz-juárez-b7384a11a"><img src="https://yeray.ncatz.com/wp-content/uploads/2017/02/linkedin-128.png" width="48px" height="48px"></a>
+          </div>
         </div> <!-- <div class="col l6 s12"> -->
         <div class="col l4 offset-l2 s12">
           <h5>Links</h5>
