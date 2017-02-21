@@ -5,7 +5,7 @@ require_once(TEMPLATEPATH."/lib/MaterializecssCompilerInPHP/MatCompiler.php");
 /* Generate css after user saves on personalization menu */
 function generateCSS(){
     $compiler = new MatCompiler();
-    $compiler->setPrimaryColor("blue-grey","lighten-2");
+    $compiler->setPrimaryColor("blue-grey","darken-1");
     $compiler->setSecondaryColor("deep-orange","accent-2");
     $compiler->setNavbarFontColor("white","",true);
     $compiler->compileScss(TEMPLATEPATH."/css/","materialize.css");

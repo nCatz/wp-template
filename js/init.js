@@ -10,6 +10,8 @@
       columnWidth: '.col',
       itemSelector: '.col',
     });
+
+    $('input#submit').addClass('btn');
     
   });
 })(jQuery);
