@@ -81,33 +81,6 @@ echo '<div id="index-banner" class="parallax-container">
     
         }
 }
-function print_nav(){
-    echo '
-    <nav class="'.get_primary_color().'" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo '.get_primary_text_color().'-text">nCatz</a>
-      <ul class="right hide-on-med-and-down">';
-				wp_nav_menu(array(
-                    'theme_location' => 'main',
-                    'menu_id' => 'primary-menu',
-					'container' => '',
-					'items_wrap' => '%3$s'
-				)); 
-     echo '
-      </ul>
-			<ul id="nav-mobile" class="side-nav">';
-       wp_nav_menu(array(
-                    'theme_location' => 'main',
-                    'menu_id' => 'primary-menu',
-					'container' => '',
-					'items_wrap' => '%3$s'
-				));
-    echo '
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>';
-}
 
 function add_menuclass($ulclass) {
    return preg_replace('/<a /', '<a class="'.get_primary_text_color().'-text"', $ulclass);

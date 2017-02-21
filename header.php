@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
- 
 	<title><?php wp_title('|', true, 'right');?> <?php bloginfo('name'); ?></title>
- 
 	<meta charset="<?php bloginfo('charset');?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
  
@@ -18,10 +16,35 @@
  
 <body <?php body_class("Site ".get_theme_background_color()); ?>>
  
-	<!-- #MAIN HEADER  -->
 <header id="main-header">
-   <?php print_nav(); ?>
-	 <?php if( is_front_page() ) header_text(); ?>
+	<nav class="'.get_primary_color().'" role="navigation">
+		<div class="nav-wrapper container">
+			<a id="logo-container" href="#" class="brand-logo '.get_primary_text_color().'-text">nCatz</a>
+			<ul class="right hide-on-med-and-down">
+				<?php 
+					wp_nav_menu(array(
+						'theme_location' => 'main',
+						'menu_id' => 'primary-menu',
+						'container' => '',
+						'items_wrap' => '%3$s'
+					));
+				?>
+			</ul>
+			<ul id="nav-mobile" class="side-nav">
+				<?php 
+					wp_nav_menu(array(
+						'theme_location' => 'main',
+						'menu_id' => 'primary-menu',
+						'container' => '',
+						'items_wrap' => '%3$s'
+					));
+				?>
+			</ul>
+			<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+		</div> <!-- <div class="nav-wrapper container"> -->
+	</nav>
+	<?php if( is_front_page() ) : ?>
+		<?php header_text(); ?>
+	<?php endif; ?>
 </header>
-	<!-- #MAIN HEADER  -->
 <main class="Site-content">
