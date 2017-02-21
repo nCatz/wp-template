@@ -5,7 +5,7 @@ class project_widget extends WP_Widget {
     function project_widget(){
         // Constructor del Widget.
         $widget_ops = array('classname' => 'project_widget', 'description' => "Descripción de Mi primer Widget" );
-        $this->WP_Widget('project_widget', "Mi primer Widget", $widget_ops);
+        $this->WP_Widget('project_widget', "Portfolio widget", $widget_ops);
     }
  
     function widget($args,$instance){
