@@ -1,6 +1,5 @@
-<!-- Archivo de cabecera global de Wordpress -->
 <?php get_header(); ?>
-<!-- Listado de posts -->
+<!-- Post list -->
 <?php if ( have_posts() ) : ?>
   <section>
     <div class="container">
