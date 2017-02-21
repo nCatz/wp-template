@@ -97,3 +97,58 @@ div{
   margin-left:1em;
   margin-right:1em;
 }
+/*Share modal*/
+.share-modal-container{
+  padding-left:0px !important;
+  padding-right:0px !important;
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+}
+.share-modal li{
+    padding: 0px;
+}
+.share-modal li div{
+  display: flex; justify-content: center;
+}
+.share-title{
+    font-size: 180%;
+}
+.facebook-color{
+  background:#3b5998;  
+}
+.twitter-color{
+  background:#55acee;  
+}
+.whatsapp-color{
+  background:#12af0a;  
+}
+.mail-color{
+  background:#0166ff;  
+}
+.linkedin-color{
+  background:#007bb5;  
+}
+.gplus-color{
+  background:#dd4b39;  
+}
+.pinterest-color{
+  background:#bd081c;  
+}
+.reddit-color{
+  background:#ff4500;  
+}
+.tumblr-color{
+  background:#35465c;  
+}
+.other-color{
+  background:#0166ff;  
+}
+.share-title{
+  font-size: 180%;
+}
+.share-modal .collection-item{
+  padding:0px !important;
+}
+a {
+  color: inherit;
+}

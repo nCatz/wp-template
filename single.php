@@ -7,10 +7,10 @@
         <?php if ( has_post_thumbnail() ) : ?>
           <div class="card-image">
             <?php the_post_thumbnail( 'full', array( 'class'  => 'blog-entry-thumbnail' ) ); ?>
-            <a class="btn-floating btn-large halfway-fab waves-effect waves-light blog-share-btn" onClick="shareBlog();"><i class="material-icons">share</i></a>
+            <a class="btn-floating btn-large halfway-fab waves-effect waves-light blog-share-btn" href="#share-modal"><i class="material-icons">share</i></a>
           </div> <!-- <div class="card-image"> -->
         <?php else: ?>
-          <a class="btn-floating btn-large halfway-fab waves-effect waves-light blog-share-btn" onClick="shareBlog();"><i class="material-icons">share</i></a>
+          <a class="btn-floating btn-large halfway-fab waves-effect waves-light blog-share-btn" href="#share-modal"><i class="material-icons">share</i></a>
         <?php endif; ?>
         <div class="card-content">
           <h1><span class=""><?php the_title(); ?></span></h1>
@@ -46,4 +46,6 @@
   </div> <!-- <div class="col s12 m12 l9"> -->
   <?php get_sidebar(); ?>
 </div> <!-- <div class="blog_entry row center-align"> -->
+
+<?php printShareModal(); ?>
 <?php get_footer(); ?>

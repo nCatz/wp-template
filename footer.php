@@ -28,6 +28,14 @@
       </div> <!-- <div class="container"> -->
     </div> <!-- <div class="footer-copyright"> -->
   </footer>
+  <!-- AddToAny BEGIN -->
+  <script>
+  var a2a_config = a2a_config || {};
+  a2a_config.locale = "es";
+  a2a_config.prioritize = ["whatsapp"];
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
+  <!-- AddToAny END -->
   <?php wp_footer(); ?>
 </body>
 </html>

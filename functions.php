@@ -27,6 +27,67 @@ function special_nav_class ($classes, $item) {
 function is_blog_entry () {
     return ( is_archive() || is_author() || is_category() || is_single() || is_tag()) && 'post' == get_post_type();
 }
+function printShareModal(){
+    ?>
+<div id="share-modal" class="modal bottom-sheet">
+  <div class="modal-content share-modal-container">
+    <h4>Compartir</h4>
+    <ul class="collection share-modal">
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style facebook-color">
+            <a class="a2a_button_facebook share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style twitter-color">
+            <a class="a2a_button_twitter share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style whatsapp-color">
+            <a class="a2a_button_whatsapp share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style mail-color">
+            <a class="a2a_button_email share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style linkedin-color">
+            <a class="a2a_button_linkedin share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style gplus-color">
+            <a class="a2a_button_google_plus share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style pinterest-color">
+            <a class="a2a_button_pinterest share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style reddit-color">
+            <a class="a2a_button_reddit share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style tumblr-color">
+            <a class="a2a_button_tumblr share-title"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+      <li class="collection-item">
+        <div class="a2a_kit a2a_kit_size_64 a2a_default_style other-color">
+            <a class="a2a_dd share-title" href="https://www.addtoany.com/share"></a>
+        </div> <!-- <div class="a2a_kit a2a_kit_size_64 a2a_default_style"> -->
+      </li>
+    </ul>
+  </div> <!-- <div class="modal-content"> -->
+</div> <!-- <div id="modal3" class="modal bottom-sheet"> -->
+    <?php
+}
 /**
  * Header text
  */
